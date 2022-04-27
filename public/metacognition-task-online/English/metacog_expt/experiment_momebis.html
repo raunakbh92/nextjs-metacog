@@ -378,7 +378,6 @@ else
 		data: {trialType: 'exit', label: 'end_fullscreen'},
 		cont_key: 32,
 		on_finish: function() {
-			window.location.href = 'http://'+window.location.hostname+':3000/instructions'
 		}
 	}
 		
@@ -423,6 +422,7 @@ else
 		on_finish: function() {
 			jsPsych.data.localSave('mydata_subj' + subject_id + 'local.csv', 'csv');
 			document.write('<p><br></br><br></br><center>Thank you for participating! <br></br> Your data code is <strong>'+subject_id+'</strong>.<br> Please wait for the experimenter.</center><p>')
+			window.location.href = 'http://'+window.location.hostname+':3000/instructions'
 		}
 
 
